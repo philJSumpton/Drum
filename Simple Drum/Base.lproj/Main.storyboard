@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14790.5"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="iOS 13.0 system colors" minToolsVersion="11.0"/>
     </dependencies>
     <scenes>
         <!--Menu View Controller-->
@@ -65,7 +66,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.29411764709999999" green="0.46274509800000002" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="pSe-JD-q7G" firstAttribute="leading" secondItem="wcv-o3-Zp4" secondAttribute="leading" id="57Z-FO-LEk"/>
                             <constraint firstItem="pSe-JD-q7G" firstAttribute="top" secondItem="l6M-oq-RaQ" secondAttribute="top" id="XhJ-W6-K9A"/>
@@ -88,10 +89,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PvF-qK-cED" userLabel="Header">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="140.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="134.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DRUM PAD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0x-k9-YrJ">
-                                        <rect key="frame" x="154" y="58" width="106.5" height="24"/>
+                                        <rect key="frame" x="154" y="55.5" width="106.5" height="24"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -104,28 +105,30 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBb-Dx-4K0" userLabel="Drum">
-                                <rect key="frame" x="0.0" y="140.5" width="414" height="421"/>
+                                <rect key="frame" x="0.0" y="134.5" width="414" height="404"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jHf-Vn-Cjf">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="421"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="404"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0cV-DC-aTw">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="208"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="199.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCZ-Gf-LcW">
-                                                        <rect key="frame" x="0.0" y="0.0" width="204.5" height="208"/>
-                                                        <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="204.5" height="199.5"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Kick"/>
                                                         <connections>
                                                             <action selector="kickHit:" destination="BYZ-38-t0r" eventType="touchDown" id="0g9-hx-U3S"/>
+                                                            <action selector="kickRelease:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kv7-Rt-C8i"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXV-jf-VgE" userLabel="Snare">
-                                                        <rect key="frame" x="209.5" y="0.0" width="204.5" height="208"/>
+                                                        <rect key="frame" x="209.5" y="0.0" width="204.5" height="199.5"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Snare"/>
                                                         <connections>
                                                             <action selector="snareHit:" destination="BYZ-38-t0r" eventType="touchDown" id="nQW-DW-akR"/>
+                                                            <action selector="snareRelease:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IzW-DC-tX9"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -134,22 +137,24 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vX7-bv-SXR">
-                                                <rect key="frame" x="0.0" y="213" width="414" height="208"/>
+                                                <rect key="frame" x="0.0" y="204.5" width="414" height="199.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoV-0T-xgr">
-                                                        <rect key="frame" x="0.0" y="0.0" width="204.5" height="208"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="204.5" height="199.5"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="cymbal"/>
                                                         <connections>
                                                             <action selector="cymbalHit:" destination="BYZ-38-t0r" eventType="touchDown" id="exn-hD-c8P"/>
+                                                            <action selector="cymbalRelease:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UUr-dH-Xam"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBR-KI-aX5">
-                                                        <rect key="frame" x="209.5" y="0.0" width="204.5" height="208"/>
+                                                        <rect key="frame" x="209.5" y="0.0" width="204.5" height="199.5"/>
                                                         <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="hat"/>
                                                         <connections>
                                                             <action selector="hatHit:" destination="BYZ-38-t0r" eventType="touchDown" id="68v-hI-tZh"/>
+                                                            <action selector="hatRelease:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iqe-GJ-51B"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -172,7 +177,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HjO-7I-JAD" userLabel="Transport">
-                                <rect key="frame" x="0.0" y="561.5" width="414" height="280.5"/>
+                                <rect key="frame" x="0.0" y="538.5" width="414" height="269.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRANSPORT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1a-QX-l8j">
                                         <rect key="frame" x="20" y="20" width="96" height="18"/>
@@ -180,11 +185,32 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="C4f-Vv-Sw9">
+                                        <rect key="frame" x="0.0" y="46" width="414" height="223.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idG-oz-2aB">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
+                                                <state key="normal" title="Drum Sounds">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctI-Hp-GRM">
+                                                <rect key="frame" x="0.0" y="112" width="414" height="111.5"/>
+                                                <state key="normal" title="Filters">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.29411764709999999" green="0.46274509800000002" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="C4f-Vv-Sw9" secondAttribute="trailing" id="411-bq-v6Y"/>
+                                    <constraint firstItem="C4f-Vv-Sw9" firstAttribute="leading" secondItem="HjO-7I-JAD" secondAttribute="leading" id="IsP-yF-O9G"/>
+                                    <constraint firstAttribute="bottom" secondItem="C4f-Vv-Sw9" secondAttribute="bottom" id="PaK-x2-fkR"/>
                                     <constraint firstItem="y1a-QX-l8j" firstAttribute="leading" secondItem="HjO-7I-JAD" secondAttribute="leading" constant="20" id="Wl0-b4-nYY"/>
                                     <constraint firstItem="y1a-QX-l8j" firstAttribute="top" secondItem="HjO-7I-JAD" secondAttribute="top" constant="20" id="kdO-Er-zxj"/>
+                                    <constraint firstItem="C4f-Vv-Sw9" firstAttribute="top" secondItem="y1a-QX-l8j" secondAttribute="bottom" constant="8" id="mhW-mz-cEm"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -214,7 +240,80 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.23188405797103" y="132.88043478260872"/>
+            <point key="canvasLocation" x="136.23188405797103" y="132.58928571428572"/>
+        </scene>
+        <!--Audio Selector View Controller-->
+        <scene sceneID="hk7-fu-12V">
+            <objects>
+                <viewController id="dOi-37-FCB" customClass="AudioSelectorViewController" customModule="Simple_Drum" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mgd-fw-50d" customClass="AudioSelectorViewController">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="og5-J9-0H8" userLabel="Top View">
+                                <rect key="frame" x="0.0" y="44" width="414" height="426"/>
+                                <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPZ-d2-zoD" userLabel="Bottom">
+                                <rect key="frame" x="0.0" y="470" width="414" height="426"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2MO-Zu-ZW2">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="426"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Kit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZk-mf-e7Y">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="213"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="qLA-kz-oNE">
+                                                <rect key="frame" x="0.0" y="213" width="414" height="213"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9E-m1-Pr2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="205.5" height="213"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Rock Kit">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZoP-Ad-POT">
+                                                        <rect key="frame" x="208.5" y="0.0" width="205.5" height="213"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Retro Kit">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstItem="2MO-Zu-ZW2" firstAttribute="top" secondItem="dPZ-d2-zoD" secondAttribute="top" id="3Xi-N6-Mgv"/>
+                                    <constraint firstItem="2MO-Zu-ZW2" firstAttribute="leading" secondItem="dPZ-d2-zoD" secondAttribute="leading" id="J1w-kK-2It"/>
+                                    <constraint firstAttribute="bottom" secondItem="2MO-Zu-ZW2" secondAttribute="bottom" id="xOA-Ee-zoX"/>
+                                    <constraint firstAttribute="trailing" secondItem="2MO-Zu-ZW2" secondAttribute="trailing" id="z9V-WX-O8Z"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="og5-J9-0H8" firstAttribute="leading" secondItem="N0y-nw-uLx" secondAttribute="leading" id="BcW-Ap-3pg"/>
+                            <constraint firstItem="dPZ-d2-zoD" firstAttribute="height" secondItem="og5-J9-0H8" secondAttribute="height" id="GAm-01-OtK"/>
+                            <constraint firstItem="dPZ-d2-zoD" firstAttribute="leading" secondItem="N0y-nw-uLx" secondAttribute="leading" id="H0Y-9b-L1h"/>
+                            <constraint firstItem="og5-J9-0H8" firstAttribute="trailing" secondItem="N0y-nw-uLx" secondAttribute="trailing" id="KHA-Ec-n5b"/>
+                            <constraint firstAttribute="bottom" secondItem="dPZ-d2-zoD" secondAttribute="bottom" id="SFF-th-BWT"/>
+                            <constraint firstItem="dPZ-d2-zoD" firstAttribute="trailing" secondItem="N0y-nw-uLx" secondAttribute="trailing" id="r06-g9-sdt"/>
+                            <constraint firstItem="og5-J9-0H8" firstAttribute="top" secondItem="N0y-nw-uLx" secondAttribute="top" id="xNM-Ju-ctr"/>
+                            <constraint firstItem="dPZ-d2-zoD" firstAttribute="top" secondItem="og5-J9-0H8" secondAttribute="bottom" id="y0C-6h-Agq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="N0y-nw-uLx"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ujg-El-j3l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="998.55072463768124" y="-111.16071428571428"/>
         </scene>
     </scenes>
     <resources>

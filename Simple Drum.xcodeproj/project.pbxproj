@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		860A75BE22CDDD660022F24F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860A75BD22CDDD660022F24F /* MenuViewController.swift */; };
+		860A75C322D0A4320022F24F /* retroOpenHat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 860A75BF22D0A4320022F24F /* retroOpenHat.wav */; };
+		860A75C422D0A4320022F24F /* retroKick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 860A75C022D0A4320022F24F /* retroKick.wav */; };
+		860A75C522D0A4320022F24F /* retroClosedHat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 860A75C122D0A4320022F24F /* retroClosedHat.wav */; };
+		860A75C622D0A4320022F24F /* retroSnare.wav in Resources */ = {isa = PBXBuildFile; fileRef = 860A75C222D0A4320022F24F /* retroSnare.wav */; };
+		860A75C822D0A8510022F24F /* AudioSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860A75C722D0A8510022F24F /* AudioSelectorViewController.swift */; };
+		860A75CA22D0B2130022F24F /* AudioSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860A75C922D0B2130022F24F /* AudioSelector.swift */; };
 		864583042288250E00B1E941 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864583032288250E00B1E941 /* AppDelegate.swift */; };
 		864583062288250E00B1E941 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864583052288250E00B1E941 /* ViewController.swift */; };
 		864583092288250E00B1E941 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 864583072288250E00B1E941 /* Main.storyboard */; };
@@ -22,6 +28,12 @@
 
 /* Begin PBXFileReference section */
 		860A75BD22CDDD660022F24F /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		860A75BF22D0A4320022F24F /* retroOpenHat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = retroOpenHat.wav; sourceTree = "<group>"; };
+		860A75C022D0A4320022F24F /* retroKick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = retroKick.wav; sourceTree = "<group>"; };
+		860A75C122D0A4320022F24F /* retroClosedHat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = retroClosedHat.wav; sourceTree = "<group>"; };
+		860A75C222D0A4320022F24F /* retroSnare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = retroSnare.wav; sourceTree = "<group>"; };
+		860A75C722D0A8510022F24F /* AudioSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSelectorViewController.swift; sourceTree = "<group>"; };
+		860A75C922D0B2130022F24F /* AudioSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSelector.swift; sourceTree = "<group>"; };
 		864583002288250E00B1E941 /* Simple Drum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Drum.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		864583032288250E00B1E941 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		864583052288250E00B1E941 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +87,8 @@
 				8645830F2288250F00B1E941 /* Info.plist */,
 				869657AE22884BA500BA8705 /* PlayAudio.swift */,
 				860A75BD22CDDD660022F24F /* MenuViewController.swift */,
+				860A75C722D0A8510022F24F /* AudioSelectorViewController.swift */,
+				860A75C922D0B2130022F24F /* AudioSelector.swift */,
 			);
 			path = "Simple Drum";
 			sourceTree = "<group>";
@@ -82,6 +96,10 @@
 		8645831522882C0F00B1E941 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
+				860A75C122D0A4320022F24F /* retroClosedHat.wav */,
+				860A75C022D0A4320022F24F /* retroKick.wav */,
+				860A75BF22D0A4320022F24F /* retroOpenHat.wav */,
+				860A75C222D0A4320022F24F /* retroSnare.wav */,
 				869657B1228852B900BA8705 /* cymbal.wav */,
 				869657B0228852B900BA8705 /* hat.wav */,
 				8645831822882CDA00B1E941 /* snare.wav */,
@@ -150,11 +168,15 @@
 			files = (
 				869657B2228852B900BA8705 /* hat.wav in Resources */,
 				869657B3228852B900BA8705 /* cymbal.wav in Resources */,
+				860A75C422D0A4320022F24F /* retroKick.wav in Resources */,
 				8645830E2288250F00B1E941 /* LaunchScreen.storyboard in Resources */,
 				8645830B2288250F00B1E941 /* Assets.xcassets in Resources */,
 				8645831722882C4500B1E941 /* kick.wav in Resources */,
+				860A75C622D0A4320022F24F /* retroSnare.wav in Resources */,
 				8645831922882CDA00B1E941 /* snare.wav in Resources */,
 				864583092288250E00B1E941 /* Main.storyboard in Resources */,
+				860A75C322D0A4320022F24F /* retroOpenHat.wav in Resources */,
+				860A75C522D0A4320022F24F /* retroClosedHat.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +190,9 @@
 				864583062288250E00B1E941 /* ViewController.swift in Sources */,
 				864583042288250E00B1E941 /* AppDelegate.swift in Sources */,
 				869657AF22884BA500BA8705 /* PlayAudio.swift in Sources */,
+				860A75CA22D0B2130022F24F /* AudioSelector.swift in Sources */,
 				860A75BE22CDDD660022F24F /* MenuViewController.swift in Sources */,
+				860A75C822D0A8510022F24F /* AudioSelectorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
