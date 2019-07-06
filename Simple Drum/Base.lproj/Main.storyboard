@@ -272,11 +272,17 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="204.5" height="202"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Rock Kit"/>
+                                                <connections>
+                                                    <action selector="setKitToRock:" destination="9IC-G6-vIH" eventType="touchUpInside" id="c6E-1H-JxA"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJ6-eB-Fql">
                                                 <rect key="frame" x="209.5" y="0.0" width="204.5" height="202"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Retro Kit"/>
+                                                <connections>
+                                                    <action selector="setKitToRetro:" destination="9IC-G6-vIH" eventType="touchUpInside" id="Cyt-Jv-Z2V"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -299,6 +305,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8NG-k0-rpF"/>
                     </view>
+                    <connections>
+                        <outlet property="retroKitButton" destination="dJ6-eB-Fql" id="Ek2-5d-Xu2"/>
+                        <outlet property="rockKitButton" destination="L4x-IE-aBC" id="e4R-Sa-du3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eSq-NJ-zYP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
