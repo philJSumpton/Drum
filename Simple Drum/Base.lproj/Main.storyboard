@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14835.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IP2-Ex-RNE">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14790.5"/>
@@ -13,33 +13,40 @@
             <objects>
                 <viewController id="IP2-Ex-RNE" customClass="MenuViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l6M-oq-RaQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pSe-JD-q7G">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yCq-9i-ZKB" userLabel="Title">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="147.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="345"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DRUMS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pDW-3j-xcW">
-                                                <rect key="frame" x="117.66666666666669" y="43.666666666666657" width="179" height="60"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pearl" translatesAutoresizingMaskIntoConstraints="NO" id="GP5-4L-u0Y">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="345"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="pDW-3j-xcW" firstAttribute="centerY" secondItem="yCq-9i-ZKB" secondAttribute="centerY" id="JZf-0w-t60"/>
-                                            <constraint firstItem="pDW-3j-xcW" firstAttribute="centerX" secondItem="yCq-9i-ZKB" secondAttribute="centerX" id="Tlr-85-0JY"/>
+                                            <constraint firstItem="GP5-4L-u0Y" firstAttribute="top" secondItem="yCq-9i-ZKB" secondAttribute="top" id="1Vq-ZR-jah"/>
+                                            <constraint firstItem="GP5-4L-u0Y" firstAttribute="leading" secondItem="yCq-9i-ZKB" secondAttribute="leading" id="8nf-w1-4Eh"/>
+                                            <constraint firstAttribute="bottom" secondItem="GP5-4L-u0Y" secondAttribute="bottom" id="ODv-41-DUy"/>
+                                            <constraint firstAttribute="trailing" secondItem="GP5-4L-u0Y" secondAttribute="trailing" id="aCP-6x-7y9"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ihH-xR-Muj" userLabel="Buttons">
-                                        <rect key="frame" x="0.0" y="147.33333333333331" width="414" height="588.66666666666674"/>
+                                        <rect key="frame" x="0.0" y="345" width="414" height="517"/>
                                         <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FuR-mX-7ZT">
+                                                <rect key="frame" x="112" y="229" width="212" height="92"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Drum Roll (Coming soon)">
+                                                    <color key="titleColor" red="0.29411764709999999" green="0.46274509800000002" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lO8-Ls-Nyp">
-                                                <rect key="frame" x="101" y="156" width="212" height="92"/>
+                                                <rect key="frame" x="112" y="100" width="212" height="92"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Drum Pad">
@@ -49,20 +56,12 @@
                                                     <segue destination="BYZ-38-t0r" kind="show" id="o50-fC-0Of"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FuR-mX-7ZT">
-                                                <rect key="frame" x="101" y="304" width="212" height="92"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Drum Roll (Coming soon)">
-                                                    <color key="titleColor" red="0.29411764709999999" green="0.46274509800000002" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.29411764709999999" green="0.46274509800000002" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="ihH-xR-Muj" firstAttribute="height" secondItem="yCq-9i-ZKB" secondAttribute="height" multiplier="4" id="NdQ-dn-bjN"/>
+                                    <constraint firstItem="ihH-xR-Muj" firstAttribute="height" secondItem="yCq-9i-ZKB" secondAttribute="height" multiplier="1.5" id="NdQ-dn-bjN"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -78,21 +77,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I1f-HL-ajG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-655.07246376811599" y="127.98913043478262"/>
+            <point key="canvasLocation" x="-655.07246376811599" y="127.90178571428571"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Simple_Drum" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PvF-qK-cED" userLabel="Header">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="119.33333333333333"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="140.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DRUM PAD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0x-k9-YrJ">
-                                        <rect key="frame" x="154" y="47.666666666666664" width="106.33333333333331" height="23.999999999999993"/>
+                                        <rect key="frame" x="154" y="58" width="106.5" height="24"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -105,16 +104,16 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBb-Dx-4K0" userLabel="Drum">
-                                <rect key="frame" x="0.0" y="119.33333333333331" width="414" height="358"/>
+                                <rect key="frame" x="0.0" y="140.5" width="414" height="421"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jHf-Vn-Cjf">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="358"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="421"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0cV-DC-aTw">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="176.66666666666666"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="208"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCZ-Gf-LcW">
-                                                        <rect key="frame" x="0.0" y="0.0" width="204.66666666666666" height="176.66666666666666"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="204.5" height="208"/>
                                                         <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="Kick"/>
                                                         <connections>
@@ -122,7 +121,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXV-jf-VgE" userLabel="Snare">
-                                                        <rect key="frame" x="209.66666666666663" y="0.0" width="204.33333333333337" height="176.66666666666666"/>
+                                                        <rect key="frame" x="209.5" y="0.0" width="204.5" height="208"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Snare"/>
                                                         <connections>
@@ -135,10 +134,10 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vX7-bv-SXR">
-                                                <rect key="frame" x="0.0" y="181.66666666666669" width="414" height="176.33333333333331"/>
+                                                <rect key="frame" x="0.0" y="213" width="414" height="208"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoV-0T-xgr">
-                                                        <rect key="frame" x="0.0" y="0.0" width="204.66666666666666" height="176.33333333333334"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="204.5" height="208"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="cymbal"/>
                                                         <connections>
@@ -146,7 +145,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBR-KI-aX5">
-                                                        <rect key="frame" x="209.66666666666663" y="0.0" width="204.33333333333337" height="176.33333333333334"/>
+                                                        <rect key="frame" x="209.5" y="0.0" width="204.5" height="208"/>
                                                         <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="hat"/>
                                                         <connections>
@@ -173,10 +172,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HjO-7I-JAD" userLabel="Transport">
-                                <rect key="frame" x="0.0" y="477.33333333333331" width="414" height="238.66666666666669"/>
+                                <rect key="frame" x="0.0" y="561.5" width="414" height="280.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRANSPORT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1a-QX-l8j">
-                                        <rect key="frame" x="20.000000000000007" y="20" width="95.666666666666686" height="18"/>
+                                        <rect key="frame" x="20" y="20" width="96" height="18"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -218,4 +217,7 @@
             <point key="canvasLocation" x="136.23188405797103" y="132.88043478260872"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pearl" width="2256" height="1612"/>
+    </resources>
 </document>
