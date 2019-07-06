@@ -14,6 +14,7 @@
 		860A75C622D0A4320022F24F /* retroSnare.wav in Resources */ = {isa = PBXBuildFile; fileRef = 860A75C222D0A4320022F24F /* retroSnare.wav */; };
 		860A75C822D0A8510022F24F /* AudioSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860A75C722D0A8510022F24F /* AudioSelectorViewController.swift */; };
 		860A75CA22D0B2130022F24F /* AudioSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860A75C922D0B2130022F24F /* AudioSelector.swift */; };
+		861116A722D0E6B100E0F0F7 /* DrumSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861116A622D0E6B100E0F0F7 /* DrumSelectorViewController.swift */; };
 		864583042288250E00B1E941 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864583032288250E00B1E941 /* AppDelegate.swift */; };
 		864583062288250E00B1E941 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864583052288250E00B1E941 /* ViewController.swift */; };
 		864583092288250E00B1E941 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 864583072288250E00B1E941 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		860A75C222D0A4320022F24F /* retroSnare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = retroSnare.wav; sourceTree = "<group>"; };
 		860A75C722D0A8510022F24F /* AudioSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSelectorViewController.swift; sourceTree = "<group>"; };
 		860A75C922D0B2130022F24F /* AudioSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSelector.swift; sourceTree = "<group>"; };
+		861116A622D0E6B100E0F0F7 /* DrumSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumSelectorViewController.swift; sourceTree = "<group>"; };
 		864583002288250E00B1E941 /* Simple Drum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Drum.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		864583032288250E00B1E941 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		864583052288250E00B1E941 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				860A75BD22CDDD660022F24F /* MenuViewController.swift */,
 				860A75C722D0A8510022F24F /* AudioSelectorViewController.swift */,
 				860A75C922D0B2130022F24F /* AudioSelector.swift */,
+				861116A622D0E6B100E0F0F7 /* DrumSelectorViewController.swift */,
 			);
 			path = "Simple Drum";
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				869657AF22884BA500BA8705 /* PlayAudio.swift in Sources */,
 				860A75CA22D0B2130022F24F /* AudioSelector.swift in Sources */,
 				860A75BE22CDDD660022F24F /* MenuViewController.swift in Sources */,
+				861116A722D0E6B100E0F0F7 /* DrumSelectorViewController.swift in Sources */,
 				860A75C822D0A8510022F24F /* AudioSelectorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
