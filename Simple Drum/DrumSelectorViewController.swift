@@ -14,20 +14,23 @@ class DrumSelectorViewController: UIViewController {
     @IBOutlet weak var rockKitButton: UIButton!
     @IBOutlet weak var retroKitButton: UIButton!
     
-    var selectedKit = "rock"
+    static var selectedKit = "rock"
+    
+    let audioSelector = AudioSelector()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateKitButtons(kit: selectedKit)
+        updateKitButtons(kit: DrumSelectorViewController.selectedKit)
     }
-    
     
     @IBAction func setKitToRock(_ sender: Any) {
         updateKitButtons(kit: "rock")
+        audioSelector.setKitToRock()
     }
     
     @IBAction func setKitToRetro(_ sender: Any) {
         updateKitButtons(kit: "retro")
+        audioSelector.setKitToRetro()
     }
     
     func updateKitButtons(kit: String) {
@@ -39,7 +42,7 @@ class DrumSelectorViewController: UIViewController {
             retroKitButton.backgroundColor = UIColor.red
         }
         
-        selectedKit = kit
+        DrumSelectorViewController.selectedKit = kit
     }
     
     

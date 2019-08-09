@@ -17,6 +17,11 @@ class PlayAudio: NSObject, AVAudioPlayerDelegate {
     
     var players: [URL: AVAudioPlayer] = [:]
     var duplicatePlayers: [AVAudioPlayer] = []
+    var masterVolume: Float = 0.5
+    
+    func setMasterVolume (value: Float) {
+        masterVolume = value
+    }
     
     func playSound(soundFileName: String) {
         
@@ -27,6 +32,7 @@ class PlayAudio: NSObject, AVAudioPlayerDelegate {
             
             if !player.isPlaying { //player is not in use, so use that one
                 player.prepareToPlay()
+                player.volume = masterVolume
                 player.play()
             } else { // player is in use, create a new, duplicate, player and use that instead
                 
@@ -40,6 +46,7 @@ class PlayAudio: NSObject, AVAudioPlayerDelegate {
                     //add duplicate to array so it doesn't get removed from memory before finishing
                     
                     duplicatePlayer.prepareToPlay()
+                    duplicatePlayer.volume = masterVolume
                     duplicatePlayer.play()
                 } catch let error {
                     print(error.localizedDescription)
@@ -51,6 +58,7 @@ class PlayAudio: NSObject, AVAudioPlayerDelegate {
                 let player = try AVAudioPlayer(contentsOf: soundFileNameURL)
                 players[soundFileNameURL] = player
                 player.prepareToPlay()
+                player.volume = masterVolume
                 player.play()
             } catch let error {
                 print(error.localizedDescription)

@@ -11,18 +11,15 @@ import AVFoundation
 
 class ViewController: UIViewController, AVAudioPlayerDelegate {
     var audioPlayer : AVAudioPlayer!
-    
-//    let defaultKit = ["kick", "snare", "hat", "cymbal"]
-//    let retroKit = ["retroKick", "retroSnare", "retroClosedHat", "retroClosedHat"]
-//    
-//    var kitInUse : [String] = []
-    
     let audioSelector = AudioSelector()
     
     @IBOutlet weak var kickButton: UIButton!
     @IBOutlet weak var snareButton: UIButton!
     @IBOutlet weak var hatButton: UIButton!
     @IBOutlet weak var cymbalButton: UIButton!
+    
+    
+    @IBOutlet weak var volumeSlider: UISlider!
     
     
     override func viewDidLoad() {
@@ -33,22 +30,22 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     @IBAction func kickHit(_ sender: Any) {
         changeButtonPress(button: kickButton)
-        PlayAudio.sharedInstance.playSound(soundFileName: audioSelector.kitInUse[0])
+        PlayAudio.sharedInstance.playSound(soundFileName: audioSelector.getKit()[0])
     }
     
     @IBAction func snareHit(_ sender: Any) {
         changeButtonPress(button: snareButton)
-        PlayAudio.sharedInstance.playSound(soundFileName: audioSelector.kitInUse[1])
+        PlayAudio.sharedInstance.playSound(soundFileName: audioSelector.getKit()[1])
     }
     
     @IBAction func hatHit(_ sender: Any) {
         changeButtonPress(button: hatButton)
-        PlayAudio.sharedInstance.playSound(soundFileName: audioSelector.kitInUse[2])
+        PlayAudio.sharedInstance.playSound(soundFileName: audioSelector.getKit()[2])
     }
     
     @IBAction func cymbalHit(_ sender: Any) {
         changeButtonPress(button: cymbalButton)
-        PlayAudio.sharedInstance.playSound(soundFileName: audioSelector.kitInUse[3])
+        PlayAudio.sharedInstance.playSound(soundFileName: audioSelector.getKit()[3])
     }
     
     @IBAction func kickRelease(_ sender: Any) {
@@ -69,6 +66,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     
+    @IBAction func updateMasterVolume(_ sender: UISlider) {
+        PlayAudio.sharedInstance.setMasterVolume(value: sender.value)
+    }
+    
+    
     func changeButtonPress(button: UIButton) {
         button.backgroundColor = UIColor.darkGray
     }
@@ -76,12 +78,5 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     func changeButtonRelease(button: UIButton) {
         button.backgroundColor = UIColor.lightGray
     }
-    
-
-    
-    
-    
-    
-    
 }
 

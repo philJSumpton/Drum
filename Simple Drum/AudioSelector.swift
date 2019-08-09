@@ -10,21 +10,29 @@ import Foundation
 
 class AudioSelector {
     
-    let defaultKitArray = ["kick", "snare", "hat", "cymbal"]
+    let rockKitArray = ["kick", "snare", "hat", "cymbal"]
     let retroKitArray = ["retroKick", "retroSnare", "retroClosedHat", "retroClosedHat"]
     
     var kitInUse : [String] = []
     
-    init() {
-        kitInUse = defaultKitArray
-    }
+//    init() {
+//        kitInUse = rockKitArray
+//    }
     
     func setKitToRock() {
-        kitInUse = defaultKitArray
+        kitInUse = rockKitArray
     }
     
     func setKitToRetro() {
         kitInUse = retroKitArray
+    }
+    
+    func getKit() -> [String] {
+        if DrumSelectorViewController.selectedKit == "rock" {
+            return rockKitArray
+        } else {
+            return retroKitArray
+        }
     }
     
     
